@@ -12,10 +12,11 @@ import java.security.MessageDigest;
 import java.security.SecureRandom;
 
 /**
- * @DESC AES 非对称加密
+ * @DESC AES非对称加密 （注：只对字符串加密）
  * @Author tzq
- * @Date 2020-01-19 18:51
+ * @Date 2020-01-19 19:33
  **/
+
 public class EncryptUtil {
     public static final String MD5 = "MD5";
     public static final String SHA1 = "SHA1";
@@ -25,13 +26,14 @@ public class EncryptUtil {
     public static final String AES = "AES";
 
     public String charset = "utf-8";
+
     public int keysizeDES = 0;
+
     public int keysizeAES = 128;
 
     public static EncryptUtil me;
 
     private EncryptUtil() {
-
     }
 
     public static EncryptUtil getInstance() {
