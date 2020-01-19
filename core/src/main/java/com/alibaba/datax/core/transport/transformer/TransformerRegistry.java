@@ -4,6 +4,7 @@ import com.alibaba.datax.common.exception.DataXException;
 import com.alibaba.datax.common.util.Configuration;
 import com.alibaba.datax.core.util.container.CoreConstant;
 import com.alibaba.datax.core.util.container.JarLoader;
+import com.alibaba.datax.transformer.AESTransformer;
 import com.alibaba.datax.transformer.ComplexTransformer;
 import com.alibaba.datax.transformer.Transformer;
 import org.apache.commons.lang3.StringUtils;
@@ -36,6 +37,7 @@ public class TransformerRegistry {
         registTransformer(new ReplaceTransformer());
         registTransformer(new FilterTransformer());
         registTransformer(new GroovyTransformer());
+        registTransformer(new AESTransformer());
     }
 
     public static void loadTransformerFromLocalStorage() {
